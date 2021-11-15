@@ -4,6 +4,8 @@
     box-sizing: border-box;
     }
 
+/* scondo principale */
+
 #container {
     height: 100vh;
     width: 100vw;
@@ -24,15 +26,83 @@ main {
     width: 80%;
     margin: auto;
     height: 80vh;
-    background-color: aqua;
     display: flex;
+    background-color: white;
 }
+/* sezione di sinistra: utente, notifiche, cerca, elenco chat*/
 
 aside {
     width: 35%;
     height: 100%;
-    background-color: rgb(255, 0, 221);
 }
+
+.notifiche {
+    display: flex;
+    background-color: #9ed9f8;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+}
+
+.container-bell {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+}
+.notifiche i {
+    color: #9ed9f8;
+    font-size: 20px;
+    line-height: 40px ;
+}
+
+.searchBar{
+    display: flex;
+}
+
+.searchBar input {
+    width: 95%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #F6F7F6;
+    text-align: center;
+}
+
+ /* elenco contatti */
+
+.container-Contatti {
+    overflow-y: scroll;
+}
+
+.elenco-contatti {
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.elenco-contatti:hover {
+    background-color: #EAEAEA;
+}
+
+.elenco-contatti img {
+    width: 10%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nome-contatti p {
+    color: #B4B6B8;
+}
+
+.date-Contatti {
+    margin-left: auto;
+    color: #B4B6B8;
+}
+
+/* sezione di destra chat principale  */
 
 section {
     width: 65%;

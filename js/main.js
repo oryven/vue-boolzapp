@@ -11,7 +11,7 @@ var container = new Vue (
 
     // richimiamo la sezione del dom
     {
-        el: "#mainPart",
+        el: "#container",
 
         data: {
 
