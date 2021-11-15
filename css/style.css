@@ -25,6 +25,52 @@ main {
     margin: auto;
     height: 80vh;
     background-color: aqua;
+    display: flex;
+}
+
+aside {
+    width: 35%;
+    height: 100%;
+    background-color: rgb(255, 0, 221);
+}
+
+section {
+    width: 65%;
+    height: 100%;
+    background-color: rgb(68, 0, 255);
+}
+
+.nome-utente, .nav {
+    display: flex;
+    height: 10%;
+}
+
+.utente {
+    width: 50%;
+    height: 50px;
+    background-color: burlywood;
+}
+
+.icons {
+    width: 50%;
+    height: 50px;
+    background-color: rgb(135, 222, 135);
+}
+
+.chat-icons, .chat-utente {
+    width: 50%;
+    
+    background-color: rgb(222, 135, 142);
+}
+
+.chat {
+    height: 80%;
+    background-color: rgb(135, 222, 142);
+}
+
+.scrivi-mess {
+    height: 10%;
+    background-color: rgb(222, 177, 135);
 }
 
 
