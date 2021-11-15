@@ -19,6 +19,7 @@
 
             <aside>
                 <div class="nome-utente">
+
                     <div class="utente">
 
                     </div>
@@ -28,6 +29,7 @@
                 </div>
 
                 <div class="notifiche">
+
                     <div class="container-bell">
                         <i class="fas fa-bell-slash"></i>
                     </div>
@@ -41,6 +43,7 @@
                         </div>
                         
                     </div>
+
                 </div>
 
                 <div class="searchBar">
@@ -55,7 +58,6 @@
 
                 <div class="container-Contatti">
 
-        
                     <div class="elenco-contatti" v-for="contact, i in contacts" :key="i">
         
                         <img :src="contact.profileImage" alt="">
@@ -84,11 +86,33 @@
 
             <section>
                 <div class="nav">
+
                     <div class="chat-utente">
+
+                        <div id="chat-attiva">
+
+                            <img src="img/avatar_1.jpg" alt="">
+        
+                            <div>
+        
+                                <span>Michele</span>
+        
+                                <p>Ultimo accesso oggi alle 10/01/2020 16:15:22</p>
+        
+                            </div>
+        
+                        </div>
     
                     </div>
+
                     <div class="chat-icons">
-    
+
+                        <i class="fas fa-search"></i>
+
+                        <i class="fas fa-paperclip"></i>
+
+                        <i class="fas fa-ellipsis-v"></i>
+
                     </div>
                 </div>
 
@@ -98,6 +122,18 @@
                 </div>
 
                 <div class="scrivi-mess">
+                    
+                    <div class="icon-smile">
+                        <i class="far fa-smile"></i>
+                    </div>
+
+                    <div class="new-mess">
+                        <input type="text" placeholder="Scrivi un messaggio">
+                    </div>
+
+                    <div class="vocale">
+                        <i class="fas fa-microphone"></i>
+                    </div>
 
                 </div>
 
