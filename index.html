@@ -132,13 +132,13 @@
                 <!-- chat attiva -->
                 <div class="chat">
 
-                    <div id="messaggi-contatto">
+                    <div v-for="message, i in contacts.messages" :key="i">
 
                         <div class="messeggio-ricevuto">
 
-                            <div>Tutto fatto!</div>
+                            <div>{{message.text}}</div>
 
-                            <div class="data-mess">10/01/2020 16:15:22</div>
+                            <div class="data-mess">{{message.text}}</div>
 
                         </div>
 
