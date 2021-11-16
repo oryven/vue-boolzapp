@@ -13,8 +13,6 @@ var container = new Vue (
     {
         el: "#container",
 
-        visible: false,
-
         data: {
 
             // creiamo un'array di oggetti 
@@ -24,7 +22,7 @@ var container = new Vue (
                 {
                     userName: "Michele",
                     profileImage: "img/avatar_1.jpg",
-                    visible: true,
+                    visible: false,
                     messages: [
 
                         {
@@ -51,7 +49,7 @@ var container = new Vue (
                 {
                     userName: "Fabio",
                     profileImage: "img/avatar_2.jpg",
-                    visible: true,
+                    visible: false,
                     messages: [
 
                         {
@@ -78,7 +76,7 @@ var container = new Vue (
                 {
                     userName: "Samuele",
                     profileImage: "img/avatar_3.jpg",
-                    visible: true,
+                    visible: false,
                     messages: [
 
                         {
@@ -105,7 +103,7 @@ var container = new Vue (
                 {
                     userName: "Luisa",
                     profileImage: "img/avatar_4.jpg",
-                    visible: true,
+                    visible: false,
                     messages: [
 
                         {
@@ -129,15 +127,12 @@ var container = new Vue (
 
         methods: {
 
-            activeContact: function(){
+            activeContact(i){
+
     
-                if(this.visible == false){
+                if(this.contacts[i].visible === false){
     
-                    this.visible == true;
-    
-                } else {
-    
-                    this.visible == false
+                    this.contacts[i].visible = true;
     
                 }
     
