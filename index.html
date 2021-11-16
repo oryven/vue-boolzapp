@@ -71,7 +71,7 @@
 
                 <div class="container-Contatti">
 
-                    <div class="elenco-contatti" v-for="contact, i in contacts" :key="i">
+                    <div class="elenco-contatti" v-for="contact, i in contacts" :key="i"  @click="activeContact">
         
                         <img :src="contact.profileImage" alt="">
         

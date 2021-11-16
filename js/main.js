@@ -13,6 +13,8 @@ var container = new Vue (
     {
         el: "#container",
 
+        visible: false,
+
         data: {
 
             // creiamo un'array di oggetti 
@@ -123,8 +125,26 @@ var container = new Vue (
 
             ]
     
+        },
+
+        methods: {
+
+            activeContact: function(){
+    
+                if(this.visible == false){
+    
+                    this.visible == true;
+    
+                } else {
+    
+                    this.visible == false
+    
+                }
+    
+            }
+    
         }
-    },
+    }
 
 )
 
