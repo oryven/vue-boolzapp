@@ -132,19 +132,19 @@
                 <!-- chat attiva -->
                 <div class="chat">
 
-                    <div v-for="messaggio, i in contacts.messages" :key="i">
+                    <div v-for="contact in contacts" v-show="contact.visible">
 
-                        <div class="messeggio-ricevuto">
+                        <div v-for="(message, i) in contact.messages" :key="i" :class="message.status === 'sent' ? 'messaggio-inviato' : 'messaggio-ricevuto'">
 
-                            <div>{{messaggio.text}}</div>
+                            <div>{{message.text}}</div>
 
-                            <div class="data-mess">{{messaggio.text}}</div>
+                            <div class="data-mess">{{message.date}}</div>
 
                         </div>
 
                     </div>
 
-                    <div id="messaggi-utente">
+                    <!-- <div id="messaggi-utente">
 
                         <div class="messaggio-inviato">
 
@@ -162,7 +162,7 @@
         
                         </div>
 
-                    </div>
+                    </div> -->
 
                     
 
