@@ -131,6 +131,14 @@ var container = new Vue (
                 status: "sent"
     
             },
+
+            risposta: {
+                
+                date: "10/01/2020 15:58:00",
+                text: "ok",
+                status: "received"
+
+            },
     
         },
 
@@ -149,11 +157,21 @@ var container = new Vue (
             inviaMessaggio(){
                 
                 this.contacts[this.chatActive].messages.push(this.nuovoMessaggio);
+                
+                setTimeout(() => this.contacts[this.chatActive].messages.push(this.risposta), 1000);
                 this.nuovoMessaggio = {
 
                     date: "10/01/2020 15:57:00",
                     text: "",
                     status: "sent"
+                }
+
+                this.risposta = {
+
+                    date: "10/01/2020 15:58:00",
+                    text: "ok",
+                    status: "received"
+
                 }
             }
     
