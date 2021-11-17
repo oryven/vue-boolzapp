@@ -157,8 +157,11 @@ var container = new Vue (
             inviaMessaggio(){
                 
                 this.contacts[this.chatActive].messages.push(this.nuovoMessaggio);
-                
-                setTimeout(() => this.contacts[this.chatActive].messages.push(this.risposta), 1000);
+
+                setTimeout(function(){
+                    this.contacts[this.chatActive].messages.push(this.risposta);
+                }),1000;
+
                 this.nuovoMessaggio = {
 
                     date: "10/01/2020 15:57:00",
