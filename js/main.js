@@ -146,8 +146,9 @@ var container = new Vue (
                  
             },
 
-            inviaMessaggio(chatActive){
-                this.messages.push(this.newMessage);
+            inviaMessaggio(){
+                
+                this.contacts[this.chatActive].messages.push(this.nuovoMessaggio);
                 this.nuovoMessaggio = {
 
                     date: "10/01/2020 15:57:00",
