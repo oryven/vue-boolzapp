@@ -122,7 +122,15 @@ var container = new Vue (
                     ],
                 }
 
-            ]
+            ],
+
+            nuovoMessaggio: {
+
+                date: "10/01/2020 15:57:00",
+                text: "",
+                status: "sent"
+    
+            },
     
         },
 
@@ -136,9 +144,20 @@ var container = new Vue (
                 /*     this.contacts[i].visible = true;
             }*/
                  
+            },
+
+            inviaMessaggio(chatActive){
+                this.contacts.messages.push(this.newMessage);
+                this.nuovoMessaggio = {
+
+                    date: "10/01/2020 15:57:00",
+                    text: "",
+                    status: "sent"
+                }
             }
     
         }
+
     }
 
 )
