@@ -71,9 +71,9 @@
 
                 <div class="container-Contatti">
 
-                    <div class="elenco-contatti" v-for="contact, i in contacts" :key="i"  @click="chatAttiva(i)">
+                    <div class="elenco-contatti" v-for="contact, i in contacts" :mykey="i"  @click="chatAttiva(i)">
         
-                        <img :src="contact.profileImage" alt="">
+                        <img :src="contact.profileImage" :alt="contacts[chatActive].userName">
         
                         <div class="nome-contatti">
         
@@ -104,11 +104,11 @@
 
                         <div id="chat-attiva">
 
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="contacts[chatActive].profileImage" :alt="contacts[chatActive].userName">
         
                             <div>
         
-                                <span>Michele</span>
+                                <span>{{contacts[chatActive].userName}}</span>
         
                                 <p>Ultimo accesso oggi alle 10/01/2020 16:15:22</p>
         
