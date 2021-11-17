@@ -158,9 +158,9 @@ var container = new Vue (
                 
                 this.contacts[this.chatActive].messages.push(this.nuovoMessaggio);
 
-                setTimeout(function(){
+                setTimeout(() => {
                     this.contacts[this.chatActive].messages.push(this.risposta);
-                }),1000;
+                },1000);
 
                 this.nuovoMessaggio = {
 
