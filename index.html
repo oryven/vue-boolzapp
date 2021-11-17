@@ -71,7 +71,7 @@
 
                 <div class="container-Contatti">
 
-                    <div class="elenco-contatti" v-for="contact, i in contacts" :key="i"  @click="activeContact(i)">
+                    <div class="elenco-contatti" v-for="contact, i in contacts" :key="i"  @click="chatAttiva(i)">
         
                         <img :src="contact.profileImage" alt="">
         
@@ -132,7 +132,19 @@
                 <!-- chat attiva -->
                 <div class="chat">
 
-                    <div id="messaggi-utente" v-for="contact in contacts" v-show="contact.visible">
+                    <div id="messaggi-utente" v-for="message, i in contacts[chatActive].messages" :key="i">
+
+                        <div :class="message.status === 'sent' ? 'messaggio-inviato' : 'messaggio-ricevuto'">
+    
+                            <div>{{message.text}}</div>
+
+                            <div class="data-mess">{{message.date}}</div>
+        
+                        </div>
+    
+                    </div>
+
+                    <!-- <div id="messaggi-utente" v-for="contact in contacts" v-show="contact.visible">
 
                         <div v-for="(message, i) in contact.messages" :key="i" :class="message.status === 'sent' ? 'messaggio-inviato' : 'messaggio-ricevuto'">
 
@@ -142,7 +154,7 @@
 
                         </div>
 
-                    </div>
+                    </div> -->
 
                     <!-- <div id="messaggi-utente">
 

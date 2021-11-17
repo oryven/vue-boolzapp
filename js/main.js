@@ -15,6 +15,7 @@ var container = new Vue (
 
         data: {
 
+            chatActive: 0,
             // creiamo un'array di oggetti 
 
             contacts: [
@@ -127,15 +128,14 @@ var container = new Vue (
 
         methods: {
 
-            activeContact(i){
+            chatAttiva(i){
 
+                this.chatActive = i;
+                // if(this.contacts[i].visible === false){
     
-                if(this.contacts[i].visible === false){
-    
-                    this.contacts[i].visible = true;
-    
-                }
-    
+                /*     this.contacts[i].visible = true;
+            }*/
+                 
             }
     
         }
