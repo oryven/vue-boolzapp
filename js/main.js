@@ -127,7 +127,7 @@ var container = new Vue (
 
             nuovoMessaggio: {
 
-                date: "10/01/2020 15:57:00",
+                date: dayjs().format('DD/MM/YYYY   hh:mm:ss'),
                 text: "",
                 status: "sent"
     
@@ -135,7 +135,7 @@ var container = new Vue (
 
             risposta: {
                 
-                date: "10/01/2020 15:58:00",
+                date: dayjs().format('DD/MM/YYYY   hh:mm:ss'),
                 text: "ok",
                 status: "received"
 
@@ -165,14 +165,14 @@ var container = new Vue (
 
                 this.nuovoMessaggio = {
 
-                    date: "10/01/2020 15:57:00",
+                    date: dayjs().format('DD/MM/YYYY   hh:mm:ss'),
                     text: "",
                     status: "sent"
                 }
 
                 this.risposta = {
 
-                    date: "10/01/2020 15:58:00",
+                    date: dayjs().format('DD/MM/YYYY   hh:mm:ss'),
                     text: "ok",
                     status: "received",
 

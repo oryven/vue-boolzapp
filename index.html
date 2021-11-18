@@ -71,7 +71,7 @@
 
                 <div class="container-Contatti">
 
-                    <div class="elenco-contatti" v-for="contact, i in contacts" :mykey="i"  @click="chatAttiva(i)" v-if= "contacts.userName.includes(cercaChat)">
+                    <div class="elenco-contatti" v-for="contact, i in contacts" :mykey="i"  @click="chatAttiva(i)" v-if= "contact.userName.toLowerCase().includes(cercaChat.toLowerCase())">
         
                         <img :src="contact.profileImage" :alt="contacts[chatActive].userName">
         
@@ -201,6 +201,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
