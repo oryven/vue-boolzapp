@@ -16,6 +16,7 @@ var container = new Vue (
         data: {
 
             chatActive: 0,
+            cercaChat: "",
             // creiamo un'array di oggetti 
 
             contacts: [
@@ -173,7 +174,7 @@ var container = new Vue (
 
                     date: "10/01/2020 15:58:00",
                     text: "ok",
-                    status: "received"
+                    status: "received",
 
                 }
             }
